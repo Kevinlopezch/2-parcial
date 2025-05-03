@@ -1,11 +1,18 @@
 import Image from "next/image";
 import Card from "@/components/Card";
 import CardList from "@/components/List";
+import TemplateComponent from "@/components/Template";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <CardList />
+    <div>
+      <TemplateComponent
+        header={<h1>Título del template</h1>}
+        footer={<p>&copy; 2025 Mi Aplicación</p>}
+        className="max-w-md mx-auto" // Clases adicionales para centrar y limitar el ancho
+      >
+        <CardList />
+      </TemplateComponent>
     </div>
   );
 }
